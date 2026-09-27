@@ -9,6 +9,7 @@ import { Simulator } from './components/Simulator';
 import { TraceView } from './components/TraceView';
 import DebugPanel from './components/DebugPanel';
 import { RedirectChainPanel } from './components/RedirectChainPanel';
+import { MinimizePanel } from './components/MinimizePanel';
 import { RegressionPanel } from './components/RegressionPanel';
 import { CoveragePanel } from './components/CoveragePanel';
 import { PartialIntersectionPanel } from './components/PartialIntersectionPanel';
@@ -251,6 +252,7 @@ export default function App() {
         </div>
       </main>
       <RedirectChainPanel rules={rules} />
+      <MinimizePanel rules={rules} method={method} url={url} />
       <RegressionPanel rules={rules} />
       {sharing && (
         <ShareCreateDialog

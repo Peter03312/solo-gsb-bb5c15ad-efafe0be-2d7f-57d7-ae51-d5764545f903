@@ -1409,3 +1409,110 @@ input.invalid {
   border-top: 1px dashed var(--border);
   padding: 10px 12px;
 }
+
+/* ---- 请求最小复现 ---- */
+
+.minimize-panel {
+  margin-top: 20px;
+}
+
+.mz-request {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  flex-wrap: wrap;
+}
+
+.mz-request-url {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  word-break: break-all;
+}
+
+.mz-results {
+  margin-top: 12px;
+}
+
+.mz-frozen {
+  margin: 10px 0 0;
+  font-size: 12.5px;
+  color: var(--muted);
+  word-break: break-all;
+}
+
+.mz-frozen code {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text);
+}
+
+.mz-rule-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+@media (max-width: 720px) {
+  .mz-rule-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mz-rule-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mz-rule {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+}
+
+ul.mz-kept .mz-rule {
+  border-left: 3px solid var(--ok);
+}
+
+ul.mz-removed .mz-rule {
+  border-left: 3px solid var(--muted);
+  opacity: 0.7;
+}
+
+.mz-rule-order {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 12px;
+  flex: none;
+  min-width: 30px;
+}
+
+.mz-rule-name {
+  flex: 1;
+  min-width: 0;
+  word-break: break-all;
+}
+
+.mz-download {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.mz-download-note {
+  color: var(--muted);
+  font-size: 12.5px;
+}
